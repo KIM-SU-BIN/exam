@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>자바스크립트</h1>
+
+	<h2>변수</h2>
+
+	<script type="text/javascript">
+		/*변수선언*/
+		/*자료형을 쓰지 않는다*/
+		console.log("변수선언");
+		var no;
+		var str;
+		var boo;
+	</script>
+
+	<script type="text/javascript">
+		/*같은 이름 변수 선언 가능*/
+		var person = "정우성";
+		var person = "이효리";
+		console.log(person);
+
+		var person = "김수빈";
+		console.log(person);
+	</script>
+
+	<script type="text/javascript">
+		/*대입시 자료형이 결정된다*/
+
+		var data;
+		console.log(typeof data);
+
+		data = 15;
+		console.log(typeof data);
+
+		data = "안녕";
+		console.log(typeof data);
+
+		data = 5 > 3;
+		console.log(typeof data);
+	</script>
+
+	<script type="text/javascript">
+	console.log("undifined, null 비교");
+	
+	var myVar01;
+	
+	console.log(myVar01);		//undifined
+	
+	myVar01=1
+	console.log(myVar01);		//undifined
+	
+	</script>
+</body>
+</html>
