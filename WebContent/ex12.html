@@ -13,10 +13,8 @@
 </body>
 
 <script type="text/javascript">
-
-
 	//2번으로 작동
-	var name = "global";	// 전역 변수를 선언
+	/*var name = "global";	// 전역 변수를 선언
 
 	//함수정의 => 1번
 	function checkscope() {
@@ -28,5 +26,22 @@
 	checkscope();	//출력 : local
 
 	console.log(name);		//출력 : global
+	 */
+	 
+
+	//실험2
+	var name = "global";
+
+	function checkscope() {
+		name = "local"; // 전역 변수를 변경
+		name2 = "로컬";
+	}
+
+	
+	checkscope();
+	console.log(name); // 출력결과: "local" 
+	console.log(name2); // 출력결과: "로컬"
+	
+	
 </script>
 </html>
