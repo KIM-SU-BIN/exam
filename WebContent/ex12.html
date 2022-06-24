@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>자바스크립트</h1>
+
+	<h2>함수 (펑션)</h2>
+
+</body>
+
+<script type="text/javascript">
+
+
+	//2번으로 작동
+	var name = "global";	// 전역 변수를 선언
+
+	//함수정의 => 1번
+	function checkscope() {
+		var name = "local";		// 지역 변수를 선언
+		console.log(name);		// 전역 변수가 아닌 지역 변수를 사용
+	}	
+	
+	
+	checkscope();	//출력 : local
+
+	console.log(name);		//출력 : global
+</script>
+</html>
