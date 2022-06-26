@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+	var num = "T"; //전역변수 선언
+
+	function localNum() {
+		var num = 10; // 지역 변수 num에 숫자 10을 할당함.
+		document.write("함수 내부에서 변수 num의 타입은 " + typeof num + "입니다.<br>");	//타입을 말함 : number
+		document.write("함수 내부에서 변수 num의 타입은 " + num + "입니다.<br>");			//결과 값을 말함 : 10
+	}
+
+	localNum(); // 함수 localNum()을 호출함.
+	document.write("----------------------------------------------------------<br>");
+	
+	
+	document.write("함수의 호출이 끝난 뒤 변수 num의 타입은 " + typeof num + "입니다.<br>");		//String
+	document.write("함수의 호출이 끝난 뒤 변수 num의 타입은 " + num + "입니다.");					//T
+</script>
+
+</html>
