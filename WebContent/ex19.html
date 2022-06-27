@@ -9,12 +9,10 @@
 	<h1>계산기</h1>
 
 	<table border="1">
-			<tr>
-			<td colspan="4">
-				<input id="display" type="text">
-			</td>
+		<tr>
+			<td colspan="4"><input id="display" type="text"></td>
 		</tr>
-	
+
 		<tr>
 			<td><button id="nine" type="button" value="9">9</button></td>
 			<td><button id="eight" type="button" value="8">8</button></td>
@@ -26,7 +24,8 @@
 			<td><button id="six" type="button" value="6">6</button></td>
 			<td><button id="five" type="button" value="5">5</button></td>
 			<td><button id="four" type="button" value="4">4</button></td>
-			<td><button id="btnMultiply" type="button" value="*">*</button> <br></td>
+			<td><button id="btnMultiply" type="button" value="*">*</button>
+				<br></td>
 		</tr>
 		<tr>
 
@@ -38,7 +37,7 @@
 		<tr>
 			<td><button id="zero" type="button" value="0">0</button></td>
 			<td><button id="reset" type="button" value="C">C</button></td>
-			<td><button id="sum" type="button" value="=">=</button></td>
+			<td><button id="Eq" type="button" value="=">=</button></td>
 			<td><button id="btnPlus" type="button" value="+">+</button> <br></td>
 		</tr>
 	</table>
@@ -48,6 +47,7 @@
 <script type="text/javascript">
 	window.onload = function() {
 
+		//html(DOM)의 자바스크립트 객체화
 		var display = document.getElementById("display");
 
 		//기호
@@ -55,7 +55,7 @@
 		var btnMinus = document.getElementById("btnMinus");
 		var btnMultiply = document.getElementById("btnMultiply");
 		var btnDivide = document.getElementById("btnDivide");
-		var sum = document.getElementById("sum");
+		var Eq = document.getElementById("Eq");
 		var reset = document.getElementById("reset");
 
 		//숫자
@@ -69,9 +69,11 @@
 		var eight = document.getElementById("eight");
 		var nine = document.getElementById("nine");
 
-		
 		//버튼을 클릭했을 때 (이벤트)
 		//기호
+
+		//내부 계산용 변수(화면에 출력될 문자열을 저장해둔다)
+		var str = "";
 
 		btnPlus.onclick = function() {
 			display.value += btnPlus.value;
@@ -85,14 +87,12 @@
 		btnDivide.onclick = function() {
 			display.value += btnDivide.value;
 		}
-		sum.onclick = function() {
+		Eq.onclick = function() {
 			display.value += eval(display.value);
 		}
-		reset.onclick = function(){
+		reset.onclick = function() {
 			display.value = "";
 		}
-
-		
 
 		//숫자
 		zero.onclick = function() {
