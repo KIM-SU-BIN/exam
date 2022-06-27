@@ -5,36 +5,61 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input id="left" type="text" value=""/> + <input id="right" type="text" value=""/> 
+	<input class="red" id="left" type="text" value="" > +
+	<input id="right" type="text" value="" >
 	<br>
 
-	<button id="btnPlus" type="button"> 더하기 </button>
+	<button class="red" id="btnPlus" type="button">더하기</button>
 
-	<p id="display"> 13</p>
+	<p id="display">13</p>
 
 </body>
 
 <script type="text/javascript">
-
-window.onload = function() {
-
-	var btnPlus = document.getElementById("btnPlus");
-	var left = document.getElementById("left");
-	var right = document.getElementById("right");
-	var display = document.getElementById("display");
-	
-	
-	//버튼을 클릭했을 때 (이벤트)
-	btnPlus.onclick = function(){
-		console.log("버튼클릭");
+	window.onload = function() {
 		
-		var leftNo = parseInt(left.value);
-		var rightNo = parseInt(right.value);
-		var sum = parseInt(leftNo) + parseInt(rightNo);
+		//tagname으로 불러오기
+		var btn = document.getElementsByTagName("button");
+		console.log(btn);
+		
+		var inputs = document.getElementsByTagName("input");
+		console.log(inputs);
+		console.log(inputs[0]);
+		console.log(inputs[1]);
+		
+		
 
-		console.log(sum);
-		display.innerHTML = sum;
-		  };
+		//class로 불러오기
+		var tags = document.getElementsByClassName("red");
+		console.log(tags);
+		console.log(tags[0]);
+		console.log(tags[1]);
+		
+		
+		
+		//id로 불러오기(기본)
+		var btnPlus = document.getElementById("btnPlus");
+		var left = document.getElementById("left");
+		var right = document.getElementById("right");
+		var display = document.getElementById("display");
+
+		
+		
+		//버튼을 클릭했을 때 (이벤트)
+		btnPlus.onclick = function() {
+			console.log("버튼클릭");
+
+			var leftNo = parseInt(left.value);
+			var rightNo = parseInt(right.value);
+			var sum = parseInt(leftNo) + parseInt(rightNo);
+
+			console.log(sum);
+			display.innerHTML = sum;
+		};
+
+		btnPlus.onclick = function() {
+
+		};
 	};
 </script>
 </html>
