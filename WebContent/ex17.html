@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript" src="./jquery-1.12.4.js">
+
+</script>
+
 </head>
 <body>
 
@@ -35,14 +40,40 @@
 				innerHTML: 이름출력영역("수빈"),
 				onclick: function(){}
 		}*/
-
+		
+		/*
+		//자바스크립트로 이벤트 처리
 		var testButton = document.getElementById("btn"); //자바스크립트를 객체화
 		var testArea = document.getElementById("display");	//testArea는 내가 지은 이름으로 변경 가능
 
 		testButton.onclick = function() { 
 			console.log("버튼클릭");
 			testArea.innerHTML = "수빈";		//innerHTML 사용하여 버튼 클릭시 이름 출력 영역 => 수빈으로 바뀜!
-		};
+		};*/
+		
+		
+		
+		//jquery 이벤트 처리
+		
+		//상상
+		/*
+		var testButton = {
+			id : "btn",
+			tag : "button",
+			type : "button",
+			on : function("keyup", b) {}
+		}; */
+
+		//#하고 아이디명 쓰기 (=getElementById 이거랑 같음) -> var 변수에 넣어주기
+		var testButton = $("#btn");
+		var testArea = $("#distplay");
+		
+		//on이라는 메소드를 갖게됨(onclick처럼 정해진 것)
+		testButton.on("click" ,function( ){
+			console.log("클릭 jquery");
+		} );
+
+		
 	};
 </script>
 </html>

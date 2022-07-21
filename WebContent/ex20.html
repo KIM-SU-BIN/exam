@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>자바스크립트</h1>
+
+	<h2>계산기</h2>
+
+	<table border="1">
+		<tr>
+			<td colspan="4"><input type="text" id="display"></td>
+		</tr>
+		<tr>
+			<td><button id="seven" value="7">7</button></td>
+			<td><button id="eight" value="8">8</button></td>
+			<td><button id="nine" value="9">9</button></td>
+			<td><button id="multi" value="*">*</button></td>
+		</tr>
+		<tr>
+			<td><button id="four" value="4">4</button></td>
+			<td><button id="five" value="5">5</button></td>
+			<td><button id="six" value="6">6</button></td>
+			<td><button id="btnMinus" value="-">-</button></td>
+		</tr>
+		<tr>
+			<td><button id="one" value="1">1</button></td>
+			<td><button id="two" value="2">2</button></td>
+			<td><button id="three" value="3">3</button></td>
+			<td><button id="add" value="+">+</button></td>
+		</tr>
+		<tr>
+			<td><button id="zero" value="0">0</button></td>
+			<td><button id="reset" value="AC">AC</button></td>
+			<td><button id="divide" value="/">/</button></td>
+			<td><button id="sum" value="=">=</button></td>
+	</table>
+
+</body>
+
+<script type="text/javascript">
+	window.onload = function() {
+
+		var one = document.getElementById("one");
+		var two = document.getElementById("two");
+		var three = document.getElementById("three");
+		var four = document.getElementById("four");
+		var five = document.getElementById("five");
+		var six = document.getElementById("six");
+		var seven = document.getElementById("seven");
+		var eight = document.getElementById("eight");
+		var nine = document.getElementById("nine");
+		var divide = document.getElementById("divide");
+		var multi = document.getElementById("multi");
+		var btnMinus = document.getElementById("btnMinus");
+		var reset = document.getElementById("reset");
+		var sum = document.getElementById("sum");
+		var add = document.getElementById("add");
+		var zero = document.getElementById("zero");
+		var display = document.getElementById("display");
+
+		zero.onclick = function() {
+			display.value += zero.value;
+		}
+		one.onclick = function() {
+			display.value += one.value;
+		}
+		two.onclick = function() {
+			display.value += two.value;
+		}
+		three.onclick = function() {
+			display.value += three.value;
+		}
+		four.onclick = function() {
+			display.value += four.value;
+		}
+		five.onclick = function() {
+			display.value += five.value;
+		}
+		six.onclick = function() {
+			display.value += six.value;
+		}
+		seven.onclick = function() {
+			display.value += seven.value;
+		}
+		eight.onclick = function() {
+			display.value += eight.value;
+		}
+		nine.onclick = function() {
+			display.value += nine.value;
+		}
+		divide.onclick = function() {
+			display.value += divide.value;
+		}
+		multi.onclick = function() {
+			display.value += multi.value;
+		}
+		btnMinus.onclick = function() {
+			display.value += btnMinus.value;
+		}
+		reset.onclick = function() {
+			display.value = "";
+		}
+		sum.onclick = function() {
+			display.value = eval(display.value);
+		}
+		add.onclick = function() {
+			display.value += add.value;
+		}
+
+	}
+	</script>
+	</html>
